@@ -949,6 +949,8 @@ nba_rookies_2022["Fator3"] <- F2$fator2
 var_compartilhada <- (afpc$sdev ^ 2/sum(afpc$sdev ^ 2))
 var_compartilhada
 
+              
+#visualizando o resultado final              
 nba_rookies_2022 %>%
   mutate(pontuacao = Fator1 * var_compartilhada[1] +
            Fator2 * var_compartilhada[2] + Fator3 * var_compartilhada[3]) -> nba_rookies_2022
